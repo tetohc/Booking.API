@@ -75,7 +75,7 @@ Booking.API es una API de gestión de reservas de clientes desarrollada utilizan
 ## Comenzando
 
 ### Requisitos Previos
-- .NET 8.0
+- .NET 9.0
 - SQL Server
 
 ### Instalación
