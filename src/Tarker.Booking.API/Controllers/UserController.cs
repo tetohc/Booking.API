@@ -16,7 +16,7 @@ namespace Tarker.Booking.API.Controllers
     /// <summary>
     /// Controller for user management.
     /// </summary>
-    [Route("v1/[controller]")]
+    [Route("[controller]")]
     [Produces("application/json")]
     [ApiController]
     [TypeFilter(typeof(ExceptionManager))]
