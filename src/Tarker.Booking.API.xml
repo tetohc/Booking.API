@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tarker.Booking.API</name>
+    </assembly>
+    <members>
+        <member name="T:Tarker.Booking.API.Controllers.BookingController">
+            <summary>
+            Mantenimiento de reservas.
+            </summary>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.BookingController.Create(Tarker.Booking.Application.DataBase.Booking.Commands.CreateBooking.CreateBookingModel,Tarker.Booking.Application.DataBase.Booking.Commands.CreateBooking.ICreateBookingCommand)">
+            <summary>
+            Crea una nueva reserva.
+            </summary>
+            <param name="model"></param>
+            <param name="createBookingCommand">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.BookingController.GetAll(Tarker.Booking.Application.DataBase.Booking.Queries.GetAllBookingQuery.IGetAllBookingQuery)">
+            <summary>
+            Retorna el listado de reservas.
+            </summary>
+            <param name="getAllBookingQuery">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.BookingController.GetByDocumentNumber(System.String,Tarker.Booking.Application.DataBase.Booking.Queries.GetBookingByDocumentNumber.IGetBookingByDocumentNumberQuery)">
+            <summary>
+            Retorna un listado de reservas filtrado por el número de documento.
+            </summary>
+            <param name="documentNumber">Número de documento.</param>
+            <param name="getBookingByDocumentNumberQuery">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.BookingController.GetByType(System.String,Tarker.Booking.Application.DataBase.Booking.Queries.GetBookingByType.IGetBookingByTypeQuery)">
+            <summary>
+            Retorna un listado de reservas filtrado por su tipo.
+            </summary>
+            <param name="type">Tipo de reserva.</param>
+            <param name="getBookingByTypeQuery">Inyección de dependecia.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tarker.Booking.API.Controllers.CustomerController">
+            <summary>
+            Mantenimiento de clientes.
+            </summary>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.Create(Tarker.Booking.Application.DataBase.Customer.Commands.CreateCustomer.CreateCustomerModel,Tarker.Booking.Application.DataBase.Customer.Commands.CreateCustomer.ICreateCustomerCommand,FluentValidation.IValidator{Tarker.Booking.Application.DataBase.Customer.Commands.CreateCustomer.CreateCustomerModel})">
+            <summary>
+            Crea un nuevo cliente.
+            </summary>
+            <param name="model"></param>
+            <param name="createCustomerCommand">Inyección de dependecia.</param>
+            <param name="validator">Inyección de dependecia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.Update(Tarker.Booking.Application.DataBase.Customer.Commands.UpdateCustomer.UpdateCustomerModel,Tarker.Booking.Application.DataBase.Customer.Commands.UpdateCustomer.IUpdateCustomerCommand,FluentValidation.IValidator{Tarker.Booking.Application.DataBase.Customer.Commands.UpdateCustomer.UpdateCustomerModel})">
+            <summary>
+            Actualiza los datos de un cliente.
+            </summary>
+            <param name="model"></param>
+            <param name="updateCustomerCommand">Inyección de dependecia.</param>
+            <param name="validator">Inyección de dependecia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.Delete(System.Guid,Tarker.Booking.Application.DataBase.Customer.Commands.DeleteCustomer.IDeleteCustomerCommand)">
+            <summary>
+            Elimina un cliente.
+            </summary>
+            <param name="customerId"></param>
+            <param name="deleteCustomerCommand">Inyección de dependecia</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.GetAll(Tarker.Booking.Application.DataBase.Customer.Queries.GetAllCustomer.IGetAllCustomerQuery)">
+            <summary>
+            Retorna el listado de clientes.
+            </summary>
+            <param name="getAllCustomerQuery">Inyección de dependecia</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.GetById(System.Guid,Tarker.Booking.Application.DataBase.Customer.Queries.GetCustomerById.IGetCustomerByIdQuery)">
+            <summary>
+            Retorna un cliente por su Id.
+            </summary>
+            <param name="customerId"></param>
+            <param name="getCustomerByIdQuery">Inyección de dependecia</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.CustomerController.GetByDocumentNumber(System.String,Tarker.Booking.Application.DataBase.Customer.Queries.GetCustomerByDocumentNumber.IGetCustomerByDocumentNumberQuery)">
+            <summary>
+            Retorna un cliente por su número de documento.
+            </summary>
+            <param name="documentNumber"></param>
+            <param name="getCustomerByDocumentNumberQuery">Inyección de dependecia</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tarker.Booking.API.Controllers.UserController">
+            <summary>
+            Mantenimiento de usuarios.
+            </summary>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.Create(Tarker.Booking.Application.DataBase.User.Commands.CreateUser.CreateUserModel,Tarker.Booking.Application.DataBase.User.Commands.CreateUser.ICreateUserCommand,FluentValidation.IValidator{Tarker.Booking.Application.DataBase.User.Commands.CreateUser.CreateUserModel})">
+            <summary>
+            Crea un nuevo usuario.
+            </summary>
+            <param name="model"></param>
+            <param name="createUserCommand">Inyección de dependencia.</param>
+            <param name="validator">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.Update(Tarker.Booking.Application.DataBase.User.Commands.UpdateUser.UpdateUserModel,Tarker.Booking.Application.DataBase.User.Commands.UpdateUser.IUpdateUserCommand,FluentValidation.IValidator{Tarker.Booking.Application.DataBase.User.Commands.UpdateUser.UpdateUserModel})">
+            <summary>
+            Actualiza los datos de un usuario.
+            </summary>
+            <param name="model"></param>
+            <param name="updateUserCommand">Inyección de dependencia.</param>
+            /// <param name="validator">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.UpdatePassword(Tarker.Booking.Application.DataBase.User.Commands.UpdateUserPassword.UpdateUserPasswordModel,Tarker.Booking.Application.DataBase.User.Commands.UpdateUserPassword.IUpdateUserPasswordCommand,FluentValidation.IValidator{Tarker.Booking.Application.DataBase.User.Commands.UpdateUserPassword.UpdateUserPasswordModel})">
+            <summary>
+            Actualiza el password de un usuario.
+            </summary>
+            <param name="model"></param>
+            <param name="updateUserPasswordCommand">Inyección de dependencia.</param>
+            <param name="validator">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.Delete(System.Guid,Tarker.Booking.Application.DataBase.User.Commands.DeleteUser.IDeleteUserCommand)">
+            <summary>
+            Elimina un usuario.
+            </summary>
+            <param name="userId"></param>
+            <param name="deleteUserCommand">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.GetAll(Tarker.Booking.Application.DataBase.User.Queries.GetAllUser.IGetAllUserQuery)">
+            <summary>
+            Retorna la lista de usuarios.
+            </summary>
+            <param name="getAllUserQuery">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.GetById(System.Guid,Tarker.Booking.Application.DataBase.User.Queries.GetUserById.IGetUserByIdQuery)">
+            <summary>
+            Retorna un usuario por su Id.
+            </summary>
+            <param name="userId"></param>
+            <param name="getUserByIdQuery">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tarker.Booking.API.Controllers.UserController.GetByUsernamePassword(System.String,System.String,Tarker.Booking.Application.DataBase.User.Queries.GetUserByUsernameAndPassword.IGetUserByUsernameAndPasswordQuery,FluentValidation.IValidator{System.ValueTuple{System.String,System.String}})">
+            <summary>
+            Retorna un usuario por su nombre de usuario y password.
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="getUserByUsernameAndPasswordQuery">Inyección de dependencia.</param>
+            <param name="validator">Inyección de dependencia.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tarker.Booking.API.DependencyInjectionService">
+            <summary>
+            Registra los servicios utilizados en el proyecto.
+            </summary>
+        </member>
+        <member name="M:Tarker.Booking.API.DependencyInjectionService.AddWebApi(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registra los servicios utilizados en el proyecto.
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
