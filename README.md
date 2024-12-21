@@ -42,6 +42,9 @@ Booking.API es una API de gestión de reservas de clientes desarrollada utilizan
 - **GET /User/Get-by-Id/{userId}**: Recupera un usuario por su ID.
 - **GET /User/Get-by-Username-Password/{username}/{password}**: Recupera un usuario por su nombre de usuario y contraseña.
 
+### Notificaciones
+- **POST /Notification/Create**: Envía una notificación por correo electrónico.
+
 ## Esquemas
 
 ### Modelos Base
@@ -68,6 +71,12 @@ Booking.API es una API de gestión de reservas de clientes desarrollada utilizan
 - **UpdateUserModel**
 - **UpdateUserPasswordModel**
 
+### Modelos de Notificación
+- **ContentBody**
+- **ContentEmail**
+- **Personalization**
+- **SendGridEmailRequestModel**
+
 ### Manejo de Errores
 - **ProblemDetails**
 
@@ -91,4 +100,4 @@ Booking.API es una API de gestión de reservas de clientes desarrollada utilizan
    dotnet restore
 
 ### Configuración
-- Actualiza el archivo appsettings.json con tu cadena de conexión de SQL Server.
+- Actualiza el archivo appsettings.json con tu cadena de conexión de SQL Server y la clave de API de tu servicio de envío de correos.
