@@ -38,10 +38,12 @@ namespace Tarker.Booking.API.Controllers
         {
             var validate = await validator.ValidateAsync(model);
             if (!validate.IsValid)
-                return StatusCode(statusCode: StatusCodes.Status400BadRequest, value: ResponseApiService.Response(statusCode: StatusCodes.Status400BadRequest, data: validate));
+                return StatusCode(statusCode: StatusCodes.Status400BadRequest, 
+                    value: ResponseApiService.Response(statusCode: StatusCodes.Status400BadRequest, data: validate));
 
             var data = await createUserCommand.Execute(model);
-            return StatusCode(statusCode: StatusCodes.Status201Created, value: ResponseApiService.Response(statusCode: StatusCodes.Status201Created, data: data));
+            return StatusCode(statusCode: StatusCodes.Status201Created, 
+                value: ResponseApiService.Response(statusCode: StatusCodes.Status201Created, data: data));
         }
 
         /// <summary>
