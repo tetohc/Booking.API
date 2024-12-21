@@ -10,13 +10,12 @@ Booking.API es una API de gestión de reservas de clientes desarrollada utilizan
 - **Inyección de Dependencias**: Mejora la testabilidad y flexibilidad.
 - **FluentValidation**: Valida las entradas de la API de manera eficiente.
 - **Manejo Global de Excepciones**: Garantiza respuestas de error consistentes.
+- **Integración con Servicios Externos**: Envío de correos electrónicos.
 - **Próximas Implementaciones**:
   - **Seguridad**:
     - Seguridad basada en roles para la gestión de secretos.
     - JWT para generar tokens de autorización.
     - Always Encrypted para asegurar datos sensibles en la base de datos.
-  - **Integración con Servicios Externos**: 
-    - Envío de correos electrónicos.
 
 ## Endpoints
 
