@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Tarker.Booking.Application.External.SendGridEmail;
+using Tarker.Booking.External.SendGridEmail;
 
 namespace Tarker.Booking.External
 {
@@ -13,6 +15,7 @@ namespace Tarker.Booking.External
         /// <returns>The updated services collection.</returns>
         public static IServiceCollection AddExternal(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddSingleton<ISendGridEmailService, SendGridEmailService>();
             return services;
         }
     }
